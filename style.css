@@ -153,17 +153,18 @@ img.logo_horizontal_topo{
 /*INÍCIO*/
 #destaque{
     background-image: url(images/Imagem_Destaque_Hibisco.jpg);
-    background-repeat: no-repeat;
-    height: 90vh;
-    width: 100%;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    margin: 0; 
     padding: 0 80px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     box-shadow: 0px 5px 15px #4e2d2c;
-    background-position: top;
-    background-size: 1366px
+    background-position: center;
 }
 
 #destaque h4{
