@@ -555,6 +555,117 @@ footer .direitos-autorais{
   text-align: center;
 }
 
+/* PAGINA DE CONTATO */
+
+#detalhes-contato{
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+
+#detalhes-contato .detalhes{
+  width: 40%;
+}
+
+#detalhes-contato .detalhes span,
+#detalhes-formulario form span{
+  font-size: 12px;
+}
+
+#detalhes-contato .detalhes h2,
+#detalhes-formulario form h2{
+  font-size: 26px;
+  line-height: 35px;
+  padding: 20px 0;
+}
+
+#detalhes-contato .detalhes h3{
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+
+#detalhes-contato .detalhes li{
+  list-style: none;
+  display: flex;
+  padding: 10px 0;
+}
+
+#detalhes-contato .detalhes li i{
+  font-size: 14px;
+  padding-right: 22px; 
+}
+
+#detalhes-contato .detalhes li p{
+  margin: 0;
+  font-size: 14px;
+}
+
+#detalhes-contato .map{
+  width: 55%;
+  height: 400px;
+}
+
+#detalhes-contato .map iframe{
+  width: 100%;
+  height: 400px;
+}
+
+#detalhes-formulario{
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+  padding: 80px;
+  border: 1px solid #e1e1e1;
+
+}
+
+#detalhes-formulario form{
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#detalhes-formulario form input,
+#detalhes-formulario form textarea{
+  width: 100%;
+  padding: 12px 15px;
+  outline: none;
+  margin-bottom: 12px;
+  border: 1px solid #e1e1e1;
+}
+
+#detalhes-formulario form button{
+  background-color: #dfa09d;
+  color: #fff;
+}
+
+#detalhes-formulario .people div{
+  padding-bottom: 25px;
+  display: flex;
+  align-items: flex-start;
+}
+
+#detalhes-formulario .people div img{
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+#detalhes-formulario .people div p{
+  margin: 0;
+  font-size: 13px;
+  line-height: 25px;
+}
+
+#detalhes-formulario .people div p span{
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
 /*RESPONSIVIDADE*/
 
 @media (max-width:799px){
@@ -728,6 +839,14 @@ footer .direitos-autorais{
 #txt-banner h2, h3{
   line-height: 1.2;
 }
+
+#detalhes-formulario {
+  padding: 40px;  
+}
+
+#detalhes-formulario form {
+  width: 50%;
+}
 }
 
 @media (max-width:477px){
@@ -759,7 +878,6 @@ footer .direitos-autorais{
   }
 
   p{
-    color: white;
     font-size: 12px;
   }
 
@@ -867,4 +985,28 @@ footer .direitos-autorais{
     width: 100%;
   }
 
+  #detalhes-contato {
+    flex-direction: column;
 }
+
+#detalhes-contato .detalhes {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+#detalhes-contato .map {
+  width: 100%;
+}
+
+#detalhes-formulario {
+  margin: 10px;
+  padding: 30px 10px;
+  flex-wrap: wrap;
+}
+
+#detalhes-formulario form {
+  width: 100%;
+  margin-bottom: 30px;
+}
+}
+
