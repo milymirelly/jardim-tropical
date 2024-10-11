@@ -1,0 +1,885 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4{
+    font-size: 20px;
+    color: #222;
+}
+
+h5{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h6{
+    font-weight: 700;
+    font-size: 12px;
+}
+
+p{
+    font-size: 16px;
+    color: #22222293;
+    margin: 15px 0px 20px 0px;
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0px;
+}
+
+button.normal{
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 30px;
+  color: #4e2d2c;
+  background-color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: .2s;
+}
+
+button.white{
+  font-size: 14px;
+  font-weight: 700;
+  padding: 11px 18px;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  border: 2px solid white;
+  outline: none;
+  transition: .2s;
+}
+
+body{
+    width: 100%;
+}
+
+body {
+  background-color: white; 
+  color: black; 
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.section-p1, .section-m1 {
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+/*CABEÇALHO*/
+
+img.logo_horizontal_topo{
+    max-width: 250px;
+}
+
+#topo-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    background: #dfa09d;
+    box-shadow: 0px 5px 15px #16161696;
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#nav-barra{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nav-barra li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#nav-barra li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    transition: 0.3s ease;
+}
+
+#nav-barra li a:hover,
+#nav-barra li a.active{
+    color: rgb(112, 71, 71);
+}
+
+#nav-barra li a.active::after,
+#nav-barra li a:hover::after{
+    content:"";
+    width: 30%;
+    height: 2px;
+    background: rgb(112, 71, 71);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+#mobile{
+  display: none;
+  align-items: center;
+}
+
+#fechar{
+  display: none;
+}
+
+/*DESTAQUE*/
+#destaque{
+    background-image: url(images/destaque_inicio/Imagem_Destaque_Hibisco.jpg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    margin: 0; 
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: 0px 5px 15px #4e2d2c;
+    background-position: center;
+}
+
+#destaque h4{
+    padding-bottom: 0%;
+}
+
+#destaque h1{
+  color: white;
+}
+
+#destaque h2, h4{
+    color: #dfa09d;
+}
+
+#destaque p{
+    color: white;
+}
+
+#destaque button{
+    background-image: url(images/destaque_inicio/botão_destaque.png);
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 15px 45px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+    font-family: "times", sans-serif;
+}
+
+/*RECURSOS*/
+
+.caixa-recursos {
+    display: flex; /* Exibe os elementos na mesma linha */
+    justify-content: center; /* Centraliza o grupo de elementos na tela */
+    align-items: flex-start; /* Alinha os elementos ao topo */
+    gap: 150px; /* Define o espaçamento horizontal entre os "recursos" */
+    text-align: center; /* Centraliza o texto dentro de cada elemento */
+    margin-top: 20px; /* Espaçamento superior para separar de outros elementos */
+  }
+  
+.recurso {
+    display: flex; /* Exibe os elementos de cada "recurso" em uma coluna */
+    flex-direction: column; /* Empilha o título (h4) e o parágrafo (p) verticalmente */
+    align-items: center; /* Centraliza os elementos dentro da coluna */
+    gap: 2px; /* Espaçamento entre o título e o parágrafo dentro do recurso */
+  }
+  
+.recurso h4 {
+    margin-bottom: 2px; /* Margem inferior para espaçamento entre h4 e p */
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Bebas Neue", sans-serif;
+    color: #4e2d2c;
+  }
+  
+.recurso h4 a{
+    margin: 0; /* Remove margem padrão */
+    font-size: 20px;
+    font-weight: 500;
+    color: #4e2d2c;
+    font-family: "Bebas Neue", sans-serif;
+  }
+
+.recurso p {
+    margin: 0; /* Remove margem padrão */
+    font-size: 15px;
+    font-weight: 500;
+    color: #4e2d2c;
+  }
+  
+
+.recurso h4 a,
+.recurso p a {
+  color:rgb(112, 71, 71); /* Define a cor do texto como branco */
+  text-decoration: none; /* Remove o sublinhado */
+  transition: 0.3s ease;
+  
+}
+
+.recurso h4 a:hover,
+.recurso p a:hover {
+  text-decoration: none; /* Garante que o sublinhado não apareça ao passar o mouse */
+  color: black;
+}
+
+/*PRODUTOS*/
+
+#produto1{
+  text-align: center;
+}
+
+#produto1 h2, p{
+  color: #4e2d2c;
+}
+
+#produto1 .pro-container{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+#produto1 .pro{
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #dfa09d7c;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 15px 0px;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+#produto1 .pro:hover{
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+
+}
+
+#produto1 .pro img{
+  width: 100%;
+  border-radius: 20px;
+}
+
+#produto1 .pro .des{
+  text-align: start;
+  padding: 10px 0px;
+}
+
+#produto1 .pro .des h6{
+  padding-bottom: 8px;
+  color: #4e2d2c;
+  font-size: 18px;
+  text-align: center;
+}
+
+#produto1 .pro .des i{
+  font-size: 12px;
+  color: rgb(243, 185, 25);
+}
+
+#produto1 .pro .des h4{
+  color: #4e2d2c;
+  font-size: 25px;
+  font-weight: 700;
+}
+
+#produto1 .pro .cart{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #4e2d2c;
+  font-weight: 500;
+  color: white;
+  border: 1px solid #251515 ;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+
+/*BANNER CLIVAVEL*/
+
+#banner-desconto{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(images/pagina_inicio/banner_desconto.png);
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  background-position: center;
+}
+
+#banner-desconto h4{
+  color: #dfa09d;
+  font-size: 16px;
+}
+
+#banner-desconto h2{
+  color: white;
+  font-size: 30px;
+  padding: 10px 0px;
+}
+
+#banner-desconto h2 span{
+  color: #dfa09d;
+  font-size: 30px;
+  padding: 10px 0px;
+}
+
+#banner-novidades{
+  display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    gap: 20px;
+    align-content: center;
+}
+
+#banner-novidades .caixa-banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url(images/pagina_inicio/banner_novo_2.png);
+  width: 580px;
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  padding: 30px;
+}
+
+#banner-novidades .caixa-banner2{
+  background-image: url(images/pagina_inicio/banner_novo_3.png);
+}
+
+#banner-novidades h4{
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#banner-novidades h2{
+  color: white;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+#banner-novidades span{
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+
+#banner-novidades .caixa-banner:hover button{
+  color: #4e2d2c;
+  background-color: white;
+  border: 1px solid white;
+}
+
+
+/*BANNER TEXTO*/
+#txt-banner{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 80px
+}
+
+#txt-banner .caixa-banner{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url(images/pagina_inicio/banner_texto_4.png);
+  min-width: 30%;
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+#txt-banner .caixa-banner2{
+  background-image: url(images/pagina_inicio/banner_texto_5.png);
+}
+
+#txt-banner .caixa-banner3{
+  background-image: url(images/pagina_inicio/banner_texto_6.png);
+}
+
+#txt-banner h2{
+  color: white;
+  font-weight: 900;
+  font-size: 22px;
+}
+
+#txt-banner h3{
+  color: #ffb3af;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+/*NOVIDADE*/
+
+#novidades{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url(images/banner_inscrever_1.png);
+  background-repeat: none;
+  background-position: 20% 30%;
+  background-color: #4e2d2c;
+}
+
+#novidades h4{
+  font-size: 22px;
+  font-weight: 700;
+  color: white;
+}
+
+#novidades p{
+  font-size: 14px;
+  font-weight: 600;
+  color: #dfa09d;
+}
+
+#novidades .form{
+  display: flex;
+}
+
+#novidades input {
+  height: 3.125rem;
+  padding: 0 1.25em;
+  font-size: 14px;
+  width: 300px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+#novidades button {
+  background-color: #dfa09d;
+  color: #4e2d2c;
+  white-space: nowrap;
+  width: 150px; /* Define a largura do botão */
+  height: 3.125rem; /* Define a altura do botão para combinar com o campo de entrada */
+  padding: 0.5rem 1rem; /* Ajusta o padding para diminuir o botão */
+  font-size: 16px; /* Ajusta o tamanho da fonte */
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+
+/*RODAPÉ*/
+
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+img.imagem_rosa{
+  max-width: 250px;
+  margin-bottom: 30px;
+}
+
+footer .col{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-bottom: 20px;
+}
+
+footer h4{
+  font-size: 14px;
+  padding-bottom: 20px;
+  color: #4e2d2c;
+}
+
+footer p{
+  font-size: 13px;
+  margin: 0 0 8px 0;
+  color: #888;
+}
+
+footer a{
+  font-size: 13px;
+  text-decoration: none;
+  color: black;
+  margin: 0 0 8px 0;
+}
+
+footer .social i{
+  color: #222;
+  padding-right: 4px;
+  cursor: pointer;
+}
+
+footer .instalacao .row img{
+  border: 1px solid #251515;
+  border-radius: 6px;
+}
+
+footer .instalacao img{
+  margin: 10px 0 15px 0;
+}
+
+footer .social i:hover,
+footer a:hover{
+  color: #4e2d2c;
+}
+
+footer .direitos-autorais{
+  width: 100%;
+  text-align: center;
+}
+
+/*RESPONSIVIDADE*/
+
+@media (max-width:799px){
+
+  .section-p1{
+    padding: 40px 80px;
+  }
+
+  #nav-barra{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: #dfa09d;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.02);
+    padding: 80px 0 0 10px;
+    transition: .3s;
+  }
+
+  #nav-barra.active{
+    right: 0px;
+  }
+
+  #nav-barra li{
+    margin-bottom: 25px;
+  }
+
+  #mobile{
+    display: flex;
+    align-items: center;
+  }
+
+  #mobile i{
+    color: #4e2d2c;
+    font-size: 28px;
+    padding-left: 20px;
+  }
+
+  #fechar{
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #4e2d2c;
+    font-size: 28px;
+  }
+
+  #bag{
+    display: none;
+  }
+
+  #destaque{
+    height: 70vh;
+    padding: 0 80px;
+    background-position: top 30% left 30%;
+  }
+
+  .caixa-recursos {
+    flex-direction: column; /* Empilha os elementos verticalmente */
+    align-items: center; /* Centraliza os elementos no eixo vertical */
+    gap: 30px; /* Diminui o espaçamento entre os elementos */
+    padding: 0 20px; /* Adiciona um padding para espaçamento nas laterais */
+}
+
+.recurso {
+    width: 100%; /* Faz os "recursos" ocuparem 100% da largura disponível */
+    text-align: center; /* Centraliza o texto */
+}
+
+.recurso h4, 
+.recurso p {
+    font-size: 18px; /* Ajusta o tamanho da fonte para melhor visualização em telas menores */
+}
+
+  #produto1 .pro-container{
+    justify-content: center;
+  }
+
+  #produto1 .pro{
+    margin: 15px;
+  }
+
+  #banner-desconto{
+    height: 20vh;
+  }
+
+  #banner-desconto h4 {
+    font-size: 18px; /* Reduz o tamanho da fonte */
+}
+
+#banner-desconto h2 {
+    font-size: 24px; /* Reduz o tamanho da fonte */
+}
+
+#banner-desconto .normal {
+    font-size: 16px; /* Reduz o tamanho da fonte do botão */
+    padding: 8px 16px; /* Ajusta o espaçamento interno do botão */
+}
+
+#banner-novidades .caixa-banner{
+  min-width: 100%;
+  height: 30vh;
+}
+
+#txt-banner{
+  padding: 0 40px;
+}
+
+#txt-banner .caixa-banner{
+  width: 28%;
+}
+
+#novidades .txt-novidade h4{
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+#novidades .txt-novidade p{
+  font-size: 12px;
+  text-align: center;
+  align-items: center;
+}
+
+#novidades .form input{
+  width: 415px;
+  align-items: center;
+}
+
+#destaque{
+  height: 90vh;
+  padding: 0 80px;
+  background-size: cover;
+}
+
+.recurso h4 {
+  margin-bottom: 2px;
+  font-size: 27px;
+  font-weight: 500;
+  font-family: "Bebas Neue", sans-serif;
+  color: #4e2d2c;
+}
+
+.recurso h4 a{
+  margin: 0; 
+  font-size: 27px;
+  font-weight: 500;
+  color: #4e2d2c;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.recurso p {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 500;
+  color: #4e2d2c;
+}
+
+#banner-novidades{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+#txt-banner h2, h3{
+  line-height: 1.2;
+}
+}
+
+@media (max-width:477px){
+  .section-p1{
+    padding: 20px
+  }
+
+  #topo-menu{
+    padding: 10px 30px;
+  }
+
+  .logo_horizontal_topo{
+    width: 200px;
+  }
+
+  h1{
+    font-size: 38px;
+    line-height: 1.2;
+  }
+
+  h2{
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  h4{
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  p{
+    font-size: 12px;
+  }
+
+  #destaque{
+    padding: 0 20px;
+    background-position: 55%;
+  }
+
+  .caixa-recursos {
+    flex-direction: column; 
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px; 
+}
+
+.recurso {
+    width: 100%; 
+    text-align: center; 
+}
+
+.recurso h4, 
+.recurso p {
+    font-size: 18px; 
+}
+
+  .recurso h4 {
+    margin-bottom: 2px;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Bebas Neue", sans-serif;
+    color: #4e2d2c;
+  }
+
+  .recurso h4 a{
+    margin: 0; 
+    font-size: 20px;
+    font-weight: 500;
+    color: #4e2d2c;
+    font-family: "Bebas Neue", sans-serif;
+  }
+  
+  .recurso p {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #4e2d2c;
+  }
+
+  #produto1 h2{
+    font-size: 30px;
+  }
+
+  #produto1 p{
+    font-size: 15px;
+    color: gray;
+  }
+
+  #produto1 .pro{
+    width: 100%;
+  }
+
+  #banner-desconto{
+    height: 40vh;
+    display: flex;
+  }
+
+  #banner-desconto h4{
+    color: #dfa09d;
+    font-size: 15px;
+  }
+  
+  #banner-desconto h2{
+    color: white;
+    font-size: 20px;
+    padding: 10px 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #banner-desconto h2 span{
+    color: #dfa09d;
+    font-size: 20px;
+    padding: 10px 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #banner-novidades .caixa-banner{
+    height: 40vh;
+  }
+
+  #txt-banner{
+    padding: 0 20px;
+  }
+
+  #txt-banner .caixa-banner{
+    width: 100%;
+  }
+
+  #novidades{
+    padding: 40px 20px;
+  }
+
+  #novidades .form{
+    width: 100%;
+  }
+}
+
