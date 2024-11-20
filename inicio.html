@@ -10,11 +10,25 @@
     <!--CÓDIGO GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    <!--FIM GOOGLE FONTS-->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Belleza&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"> <!--FIM GOOGLE FONTS-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Barra de pesquisa</title>
+    <link rel="stylesheet" href="stylepesquisa.css">
 </head>
 
+<body>
     <header id="topo-menu">
-        <a href="#"><img src="images/navbar/Logo_Horizontal_Branca.png" class="logo_horizontal_topo" alt="Logo_Horizontal_topo"></a>
+        <a href="#"><img src="images/navbar/Logo_Horizontal_Branca.png" class="logo_horizontal_topo"
+                alt="Logo_Horizontal_topo"></a>
+        <div class="search">
+            <input type="search" id="searchInput" placeholder="Pesquisar">
+            <div class="icon"><ion-icon name="search-outline"></ion-icon></div>
+            <ul id="suggestions-list"></ul>
+        </div>
+        <div class="card-container"></div>
         <div>
             <ul id="nav-barra">
                 <li><a class="active" href="inicio.html">Início</a></li>
@@ -43,144 +57,146 @@
     <section id="recursos" class="section-p1">
         <div class="caixa-recursos">
             <div class="recurso">
-              <h4><i class="bi bi-tag-fill"></i> 5% OFF NA SUA PRIMEIRA COMPRA</h4>
-              <p>Com o cupom: PRIMEIRACOMPRA</p>
+                <h4><i class="bi bi-tag-fill"></i> 5% OFF NA SUA PRIMEIRA COMPRA</h4>
+                <p>Com o cupom: PRIMEIRACOMPRA</p>
             </div>
             <div class="recurso">
-              <h4><i class="bi bi-credit-card-fill"></i> 5x SEM JUROS</h4>
-              <p>ou em até 12x no cartão c/juros</p>
+                <h4><i class="bi bi-credit-card-fill"></i> 5x SEM JUROS</h4>
+                <p>ou em até 12x no cartão c/juros</p>
             </div>
             <div class="recurso">
-              <h4><a href="#"><i class="bi bi-shield-shaded"></i> SITE SEGURO</a></h4>
-              <p><a href="#">PRECISA TROCAR OU DEVOLVER? É FÁCIL</a></p>
+                <h4><a href="#"><i class="bi bi-shield-shaded"></i> SITE SEGURO</a></h4>
+                <p><a href="#">PRECISA TROCAR OU DEVOLVER? É FÁCIL</a></p>
             </div>
-          </div>
-    </section>  <!--rescursos-->
+        </div>
+    </section> <!--rescursos-->
 
-    <section id="produto1"class="section-p1">
+    <section id="produto1" class="section-p1">
         <h2>Flores Destaque</h2>
         <p>O Melhor da Natureza Tropical para Você.</p>
         <div class="pro-container">
             <div class="pro" onclick="window.location.href='sproduct.html';">
                 <img src="images/pagina_flores/Orquídea Phalaenopsis.jpg" alt="">
                 <div class="des">
-                        <h6>Orquídea Phalaenopsis</h6>
-                        <div class="estrelas">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
+                    <h6>Orquídea Phalaenopsis</h6>
+                    <div class="estrelas">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
                     <h4>R$49,90</h4>
                 </div>
                 <a href="#"><i class="bi bi-cart2 cart"></i></a>
             </div>
-            <div class="pro"onclick="window.location.href='2_sproduct.html';">
+            <div class="pro" onclick="window.location.href='2_sproduct.html';">
                 <img src="images/pagina_flores/Flor do Campo.jpg" alt="">
                 <div class="des">
-                        <h6>Flor do Campo</h6>
-                        <div class="estrelas">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
+                    <h6>Flor do Campo</h6>
+                    <div class="estrelas">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
                     <h4>R$39,90</h4>
                 </div>
                 <a href="#"><i class="bi bi-cart2 cart"></i></a>
             </div>
-            <div class="pro"onclick="window.location.href='3_sproduct.html';">
+            <div class="pro" onclick="window.location.href='3_sproduct.html';">
                 <img src="images/pagina_flores/Lírios.jpg" alt="">
                 <div class="des">
-                        <h6>Lírios</h6>
-                        <div class="estrelas">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
+                    <h6>Lírios</h6>
+                    <div class="estrelas">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
                     <h4>R$29,90</h4>
                 </div>
                 <a href="#"><i class="bi bi-cart2 cart"></i></a>
             </div>
-            <div class="pro"onclick="window.location.href='4_sproduct.html';">
+            <div class="pro" onclick="window.location.href='4_sproduct.html';">
                 <img src="images/pagina_flores/Girassol.jpg" alt="">
                 <div class="des">
-                        <h6>Girassol</h6>
-                        <div class="estrelas">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
+                    <h6>Girassol</h6>
+                    <div class="estrelas">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
                     <h4>R$9,90</h4>
                 </div>
                 <a href="#"><i class="bi bi-cart2 cart"></i></a>
             </div>
-            <div class="pro"onclick="window.location.href='5_sproduct.html';">
+            <div class="pro" onclick="window.location.href='5_sproduct.html';">
                 <img src="images/pagina_flores/Suculentas.jpg" alt="">
                 <div class="des">
-                        <h6>Suculentas</h6>
-                        <div class="estrelas">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
+                    <h6>Suculentas</h6>
+                    <div class="estrelas">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
                     <h4>R$12,90</h4>
                 </div>
                 <a href="#"><i class="bi bi-cart2 cart"></i></a>
             </div>
-            <div class="pro"onclick="window.location.href='6_sproduct.html';">
+            <div class="pro" onclick="window.location.href='6_sproduct.html';">
                 <img src="images/pagina_flores/Astromélias.jpg" alt="">
                 <div class="des">
-                        <h6>Astromélias</h6>
-                        <div class="estrelas">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
+                    <h6>Astromélias</h6>
+                    <div class="estrelas">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
                     <h4>R$32,90</h4>
                 </div>
                 <a href="#"><i class="bi bi-cart2 cart"></i></a>
             </div>
-            <div class="pro"onclick="window.location.href='7_sproduct.html';">
+            <div class="pro" onclick="window.location.href='7_sproduct.html';">
                 <img src="images/pagina_flores/gerberas (3).jpg" alt="">
                 <div class="des">
-                        <h6>Gérberas</h6>
-                        <div class="estrelas">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
+                    <h6>Gérberas</h6>
+                    <div class="estrelas">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
                     <h4>R$22,90</h4>
                 </div>
                 <a href="#"><i class="bi bi-cart2 cart"></i></a>
             </div>
-            <div class="pro"onclick="window.location.href='8_sproduct.html';">
+            <div class="pro" onclick="window.location.href='8_sproduct.html';">
                 <img src="images/pagina_flores/Rosas.jpg" alt="">
                 <div class="des">
-                        <h6>Rosas</h6>
-                        <div class="estrelas">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                        </div>
+                    <h6>Rosas</h6>
+                    <div class="estrelas">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
                     <h4>R$19,90</h4>
                 </div>
                 <a href="#"><i class="bi bi-cart2 cart"></i></a>
             </div>
+            <div id="card-container"></div>
+
     </section><!--produtos-destaque-->
 
     <section id="banner-desconto" class="section-m1">
@@ -189,7 +205,7 @@
         <button class="normal">Veja Mais</button>
     </section><!--banner-desconto-->
 
-    <section id="banner-novidades"class="section-p1">
+    <section id="banner-novidades" class="section-p1">
         <div class="caixa-banner">
             <h4>ofertas malucas</h4>
             <h2>compre 1 e leve 1 grátis</h2>
@@ -270,7 +286,7 @@
             <p>Pela App Store ou Play Store</p>
             <div class="row">
                 <img src="images/rodape/appstore.jpg" alt="">
-                <img src="images/rodape/playstore.jpg"alt="">
+                <img src="images/rodape/playstore.jpg" alt="">
             </div>
             <p>Formas de Pagamento Segura</p>
             <img src="images/rodape/pagamentos.png" alt="">
@@ -281,7 +297,7 @@
         </div>
     </footer><!---rodapé-->
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>
