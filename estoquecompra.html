@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho</title>
+    <link rel="stylesheet" href="stylecarrinho.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belleza&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="topo-menu">
+        <a href="#"><img src="images/navbar/Logo_Horizontal_Branca.png" class="logo_horizontal_topo" alt="Logo_Horizontal_topo"></a>
+        <div>
+            <ul id="nav-barra">
+                <li><a href="inicio.html">Início</a></li>
+                <li><a href="flores.html">Flores</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li id="bag"><a class="active" href="carrinho.html"><i class="bi bi-bag"></i></a></li>
+                <a href="#" id="fechar"><i class="bi bi-x"></i></a>
+            </ul>
+        </div>
+    </header>
+
+    <section id="cart" class="section-p1">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>remover</td>
+                    <td>imagem</td>
+                    <td>nome</td>
+                    <td>preço</td>
+                    <td>quantidade</td>
+                    <td>total</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#"><i class="bi bi-circle"></i></a></td>
+                    <td><img src="images/pagina_flores/Amaranthus.jpg" alt=""></td>
+                    <td>Amaranthus</td>
+                    <td id="preco-amaranthus">89,90</td>
+                    <td>
+                        <button type="button" onclick="alterarQuantidade('quantidade-amaranthus', -1, 89.90, 8, 'amaranthus')">-</button>
+                        <input type="number" value="1" id="quantidade-amaranthus" min="1" onchange="validarQuantidade('amaranthus', 8, 89.90)">
+                        <button type="button" onclick="alterarQuantidade('quantidade-amaranthus', 1, 89.90, 8, 'amaranthus')">+</button>
+                        <button type="button" onclick="adicionarProduto('amaranthus', 8, 89.90)">Adicionar</button>
+                    </td>
+                    <td id="total-amaranthus">89,90</td>
+                </tr>
+                <tr>
+                    <td><a href="#"><i class="bi bi-circle"></i></a></td>
+                    <td><img src="images/pagina_flores/Astromélias.jpg" alt=""></td>
+                    <td>Astromélias</td>
+                    <td id="preco-astromelias">32,90</td>
+                    <td>
+                        <button type="button" onclick="alterarQuantidade('quantidade-astromelias', -1, 32.90, 8, 'astromelias')">-</button>
+                        <input type="number" value="1" id="quantidade-astromelias" min="1" onchange="validarQuantidade('astromelias', 8, 32.90)">
+                        <button type="button" onclick="alterarQuantidade('quantidade-astromelias', 1, 32.90, 8, 'astromelias')">+</button>
+                        <button type="button" onclick="adicionarProduto('astromelias', 8, 32.90)">Adicionar</button>
+                    </td>
+                    <td id="total-astromelias">32,90</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Mensagens de erro e sucesso -->
+        <div id="mensagem-indisponivel" style="color: red; display: none;">Quantidade indisponível, por favor selecione outro valor.</div>
+        <div id="mensagem-sucesso" style="color: green; display: none;">Produto adicionado ao carrinho!</div>
+    </section>
+
+    <section id="cart-add" class="section-p1">
+        <div id="cupom">
+            <h3>aplicar cupom</h3>
+            <div>
+                <input type="text" placeholder="Digite o CUPOM">
+                <button class="normal">aplicar</button>
+            </div>
+        </div>
+        <div id="total">
+            <h3>total</h3>
+            <table>
+                <tr>
+                    <td>total</td>
+                    <td id="total-geral">122,80</td>
+                </tr>
+                <tr>
+                    <td>frete</td>
+                    <td>grátis</td>
+                </tr>
+                <tr>
+                    <td><strong>total</strong></td>
+                    <td><strong id="total-final">122,80</strong></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img src="images/rodape/Logo_Vertical_Rosa.png" class="imagem_rosa" alt="imagem_rosa">
+            <h4>Contato</h4>
+            <p><strong>Endereço: </strong>Rua Quinze de Março, 123, Madalena - Recife/PE</p>
+            <p><strong>Telefone: </strong>(81) 3456-7890 / (81) 9.8765-4321</p>
+            <p><strong>Atendimento: </strong>Segunda a Sábado: 08h00 - 18h00h</p>
+            <div class="social">
+                <h4>Siga-nos nas Redes Sociais</h4>
+                <div class="icones-social">
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter-x"></i>
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-pinterest"></i>
+                    <i class="bi bi-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>Sobre</h4>
+            <a href="#">Sobre nós</a>
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Termos & Condições</a>
+            <a href="#">Fale Conoso</a>
+        </div>
+        <div class="col">
+            <h4>Minha Conta</h4>
+            <a href="#">Login</a>
+            <a href="#">Ver o Carrinho</a>
+            <a href="#">Termos & Condições</a>
+            <a href="#">Lista de Desejos</a>
+            <a href="#">Rastrear meu pedido</a>
+            <a href="#">Ajuda</a>
+        </div>
+
+        <div class="col instalacao">
+            <h4>Instale o APP</h4>
+            <p>Pela App Store ou Play Store</p>
+            <div class="row">
+                <img src="images/rodape/appstore.jpg" alt="">
+                <img src="images/rodape/playstore.jpg" alt="">
+            </div>
+            <p>Formas de Pagamento Segura</p>
+            <img src="images/rodape/pagamentos.png" alt="">
+        </div>
+
+        <div class="direitos-autorais">
+            <p>©️2024, Equipe UNINASSAU GRAÇAS - HTML CSS Ecommerce</p>
+        </div>
+    </footer>
+
+    <script>
+        // Função para alterar a quantidade
+        function alterarQuantidade(id, incremento, preco, estoqueMaximo, produtoId) {
+            var input = document.getElementById(id);
+            var quantidade = parseInt(input.value);
+            quantidade += incremento;
+
+            // Verifica a quantidade máxima
+            if (quantidade < 1) quantidade = 1;
+            if (quantidade > estoqueMaximo) quantidade = estoqueMaximo;
+
+            input.value = quantidade;
+            adicionarProduto(produtoId, estoqueMaximo, preco);
+        }
+
+        // Função para validar a quantidade
+        function validarQuantidade(produtoId, estoqueMaximo, precoUnitario) {
+            var inputQuantidade = document.getElementById('quantidade-' + produtoId);
+            var quantidade = inputQuantidade.value;
+            if (quantidade > estoqueMaximo) {
+                document.getElementById('mensagem-indisponivel').style.display = 'block';
+                document.getElementById('mensagem-sucesso').style.display = 'none';
+            } else {
+                document.getElementById('mensagem-indisponivel').style.display = 'none';
+                document.getElementById('mensagem-sucesso').style.display = 'block';
+            }
+            adicionarProduto(produtoId, estoqueMaximo, precoUnitario);
+        }
+
+        // Função para adicionar produto ao carrinho
+        function adicionarProduto(produtoId, estoqueMaximo, precoUnitario) {
+            var inputQuantidade = document.getElementById('quantidade-' + produtoId);
+            var quantidade = inputQuantidade.value;
+            var mensagemIndisponivel = document.getElementById('mensagem-indisponivel');
+            var mensagemSucesso = document.getElementById('mensagem-sucesso');
+
+            // Verifica se a quantidade é válida
+            if (quantidade > estoqueMaximo) {
+                mensagemIndisponivel.style.display = 'block';
+                mensagemSucesso.style.display = 'none'; // Esconde a mensagem de sucesso
+            } else {
+                mensagemIndisponivel.style.display = 'none';
+                mensagemSucesso.style.display = 'block';
+            }
+
+            // Atualiza o total do produto
+            var totalProduto = quantidade * precoUnitario;
+            document.getElementById('total-' + produtoId).innerText = totalProduto.toFixed(2);
+
+            // Atualiza o total geral do carrinho
+            atualizarTotalGeral();
+        }
+
+        // Função para atualizar o total geral do carrinho
+        function atualizarTotalGeral() {
+            var totalAmaranthus = parseFloat(document.getElementById('total-amaranthus').innerText.replace(',', '.'));
+            var totalAstromelias = parseFloat(document.getElementById('total-astromelias').innerText.replace(',', '.'));
+
+            var totalGeral = totalAmaranthus + totalAstromelias;
+            document.getElementById('total-geral').innerText = totalGeral.toFixed(2);
+            document.getElementById('total-final').innerText = totalGeral.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>
